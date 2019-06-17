@@ -10,26 +10,11 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= stylesheet_link_tag 'blogs', :media => 'screen' %>
-    </head>
+  </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= login_helper %>
-    <!-- Start of nav -->
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
-        </nav>
-      </div>
-    </div>
-    <!-- End of nav -->
+    <%= render 'shared/blog_nav' %>
 
     <!-- start of blog header -->
     <div class="blog-header">
@@ -44,7 +29,6 @@
     <div class="container">
       <div class="row">
     <!-- start of container and row element -->
-        <%= login_helper %>
 
         <%= yield %>
 
@@ -81,7 +65,7 @@
           </div>
         </div>
         <!-- end of sidebar -->
-  
+      <%= login_helper %>
       <%= yield %>
       <!-- start of footer -->
       <footer class="blog-footer">
