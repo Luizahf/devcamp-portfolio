@@ -4,7 +4,7 @@ class PortfoliosController < ApplicationController
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
     def index
-        @portfolio_items = Portfolio.all
+        @portfolio_items = Portfolio.by_position
     end
 
     def angular
@@ -20,11 +20,11 @@ class PortfoliosController < ApplicationController
       @portfolio_item = Portfolio.new(portfolio_params)
 
         respond_to do |format|
-        if @portfolio_item.save
-            format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
-        else
-            format.html { render :new }
-        end
+          if @portfolio_item.save
+              format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully created.' }
+          else
+              format.html { render :new }
+          end
         end
     end
 
