@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'duktape'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -58,7 +60,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'friendly_id', '~> 5.2.4'
-gem 'jquery-rails'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'petergate', '~> 1.6', '>= 1.6.3'
 gem 'coffee-script-source', '1.8.0'
@@ -66,3 +67,4 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'kaminari', '~> 0.16.3'
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 gem 'rails_sortable'
+gem 'rails-jquery-ui-sortable', '~> 1.11', '>= 1.11.4'
